@@ -7,7 +7,7 @@
             "actions": [
                 {
                     "name": "HorizontalMove",
-                    "type": "Value",
+                    "type": "PassThrough",
                     "id": "fb376832-3a9a-4e59-b443-65873b1134fa",
                     "expectedControlType": "Axis",
                     "processors": "",
