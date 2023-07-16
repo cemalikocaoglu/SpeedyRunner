@@ -24,7 +24,7 @@ namespace SpeedyRunner.Controllers
         JumpRigidbody _jumpRigidbody;
 
 
-        public bool _jump;
+        public bool _Isjump;
         float _horizontal;
 
 
@@ -38,13 +38,22 @@ namespace SpeedyRunner.Controllers
             _jumpRigidbody = new JumpRigidbody(this);
 
             _input = new InputReader(GetComponent<PlayerInput>());
+
+          
         }
 
 
         private void Update()
         {
             _horizontal = _input.Horizontal;
+            //Debug.Log("ÝsJump =>" + _input.IsJump);
 
+
+            if(_input.IsJump )
+
+            {
+                _Isjump = true;
+            }
 
         }
 
@@ -54,11 +63,13 @@ namespace SpeedyRunner.Controllers
         {
             _horizontalMovers.tickFixed(_horizontal, speed);
 
-            if( _jump )
+            if( _Isjump )
             {
                 _jumpRigidbody.ficksClick(jumpVelocityNew);
-                _jump= false;
+               
             }
+
+            _Isjump = false;
         }
 
 

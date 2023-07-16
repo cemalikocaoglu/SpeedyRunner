@@ -12,6 +12,8 @@ namespace SpeedyRunner.Movments
 
         Rigidbody _rb;
 
+        
+
 
         public JumpRigidbody(PlayerControllers playerControllers)
         {
@@ -22,6 +24,8 @@ namespace SpeedyRunner.Movments
 
         public void ficksClick(float jumpVelocity)
         {
+
+            if (_rb.velocity.y !=0) return;
 
             _rb.AddForce(0, jumpVelocity, 0);
 
