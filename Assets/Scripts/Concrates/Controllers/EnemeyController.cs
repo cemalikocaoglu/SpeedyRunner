@@ -13,6 +13,10 @@ namespace SpeedyRunner.Controllers
         [SerializeField] float _moveSpeed = 5f;
         VerticalMover _verticalMover;
 
+        [SerializeField] float _maxLifeTime = 7f;
+
+        float _durationTime = 0f;
+
         public float MoveSpeed => _moveSpeed;
 
         private void Awake()
@@ -25,6 +29,22 @@ namespace SpeedyRunner.Controllers
         {
 
             _verticalMover.fixedTick();
+
+            _durationTime += Time.deltaTime;
+
+            if(_durationTime > _maxLifeTime)
+            {
+                _durationTime = 0f;
+                killedEnemy();      
+            }
+
+
+        }
+
+
+        void killedEnemy()
+        {
+            Destroy(gameObject);
         }
 
 
