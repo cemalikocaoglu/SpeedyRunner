@@ -144,7 +144,7 @@ namespace SpeedyRunner.Inputs
                 {
                     ""name"": ""Jump"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""9dceba71-e9f2-4af5-84e4-0afc3fba1e26"",
+                    ""id"": ""526ce32f-7389-4d8a-a1b5-bf6a954ec985"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -220,9 +220,9 @@ namespace SpeedyRunner.Inputs
                 },
                 {
                     ""name"": """",
-                    ""id"": ""42ff804e-ea51-4b26-83bf-8b452c4235a3"",
+                    ""id"": ""5988bd99-15a1-4822-a2a2-9435998fb257"",
                     ""path"": ""<Keyboard>/space"",
-                    ""interactions"": ""Tap(duration=1.401298E-45)"",
+                    ""interactions"": ""Tap(duration=0.1)"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Jump"",

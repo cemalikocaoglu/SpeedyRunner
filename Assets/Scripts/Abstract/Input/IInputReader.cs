@@ -11,7 +11,7 @@ namespace SpeedyRunner.Abstract.Inputs
 
          float  Horizontal { get;  }
 
-         bool IsJump { get;  }
+         bool IsJump { get;  set; }
 
     }
 }

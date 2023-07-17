@@ -13,7 +13,7 @@ namespace SpeedyRunner.Movments
         Rigidbody _rb;
 
         
-
+        
 
         public JumpRigidbody(PlayerControllers playerControllers)
         {
