@@ -13,6 +13,8 @@ namespace SpeedyRunner.Controllers
     public class PlayerControllers : MonoBehaviour
     {
 
+        [SerializeField] float _moveBoundry=7f;
+        public float MoveBoundry => _moveBoundry;
         public float horizontal = 0f;
 
         public float speed = 10f;
@@ -30,6 +32,9 @@ namespace SpeedyRunner.Controllers
 
 
         IInputReader _input;
+
+
+        float MoveSpeed => speed;
 
         private void Awake()
         {
@@ -72,7 +77,7 @@ namespace SpeedyRunner.Controllers
 
         private void FixedUpdate()
         {
-            _horizontalMovers.tickFixed(_horizontal, speed);
+            _horizontalMovers.tickFixed(_horizontal);
 
             if( _Isjump2 )
             {
