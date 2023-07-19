@@ -54,7 +54,7 @@ namespace SpeedyRunner.Controllers
         private void Update()
         {
             _horizontal = _input.Horizontal;
-            Debug.Log("ÝsJump =>" + _input.IsJump);
+           // Debug.Log("ÝsJump =>" + _input.IsJump);
 
             //Debug.Log("Horizontal => " + _input.Horizontal);
 
