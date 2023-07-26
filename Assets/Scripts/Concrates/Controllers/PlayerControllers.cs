@@ -1,5 +1,6 @@
 using SpeedyRunner.Abstract.Inputs;
 using SpeedyRunner.Inputs;
+using SpeedyRunner.Managers;
 using SpeedyRunner.Movments;
 using System.Collections;
 using System.Collections.Generic;
@@ -29,7 +30,7 @@ namespace SpeedyRunner.Controllers
         public bool _Isjump2;
         float _horizontal;
 
-
+        bool _isDead = true;
 
         IInputReader _input;
 
@@ -54,16 +55,8 @@ namespace SpeedyRunner.Controllers
         private void Update()
         {
             _horizontal = _input.Horizontal;
-           // Debug.Log("ÝsJump =>" + _input.IsJump);
 
-            //Debug.Log("Horizontal => " + _input.Horizontal);
-
-            //if (_input.IsJump)
-
-            //{
-            //    _Isjump2 = true;
-            //}
-
+            if (_isDead) return;
 
             if(Input.GetKeyDown(KeyCode.Space)) {
 
@@ -87,6 +80,20 @@ namespace SpeedyRunner.Controllers
             }
             
 
+        }
+
+
+
+        private void OnCollisionEnter(Collision collision)
+       {
+            EnemeyController enemeyController = collision.collider.GetComponent<EnemeyController>();
+
+            if(enemeyController != null )
+            {
+
+                GameManager.instance.StopGame();
+                _isDead=false;
+            }
         }
 
 
