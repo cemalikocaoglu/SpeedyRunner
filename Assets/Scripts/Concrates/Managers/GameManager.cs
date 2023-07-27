@@ -2,6 +2,7 @@ using SpeedyRunner.Abstract.Utilities;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SpeedyRunner.Uýs;
 
 namespace SpeedyRunner.Managers
 {
@@ -19,6 +20,20 @@ namespace SpeedyRunner.Managers
             Time.timeScale = 0;
         }
 
+
+        public static void ExitScene()
+        {
+
+            Debug.Log("Exit");
+
+        }
+
+        public static void LoadScene()
+        {
+
+            Debug.Log("Load");
+
+        }
 
 
     }
