@@ -33,6 +33,8 @@ namespace SpeedyRunner.Managers
 
             Debug.Log("Load");
 
+            Application.Quit();
+
         }
 
 
