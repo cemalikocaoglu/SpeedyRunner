@@ -82,11 +82,14 @@ namespace SpeedyRunner.Controllers
 
         }
 
+        
 
 
-        private void OnCollisionEnter(Collision collision)
-       {
-            EnemeyController enemeyController = collision.collider.GetComponent<EnemeyController>();
+
+        void OnTriggerEnter(Collider other)
+        { 
+
+            EnemeyController enemeyController = other.GetComponent<Collider>().GetComponent<EnemeyController>();
 
             if(enemeyController != null )
             {
