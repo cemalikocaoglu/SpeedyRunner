@@ -18,10 +18,10 @@ public class MenuPanel : MonoBehaviour
 
         SceneManager.LoadScene(1);
         UnityEngine.Debug.Log("Diger Sahneye Gecti");
+        Time.timeScale = 1;
 
 
-
-        }
+    }
 
 
         public void ExitButton()
@@ -30,6 +30,13 @@ public class MenuPanel : MonoBehaviour
             
 
         }
+
+        public void menuScene()
+    {
+
+        SceneManager.LoadScene(0);
+
+    }
 
 
        

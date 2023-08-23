@@ -19,7 +19,7 @@ namespace SpeedyRunner.Controllers
         public float horizontal = 0f;
 
         public float speed = 10f;
-
+        public GameObject panel;
         
 
         HorizontalMovers _horizontalMovers;
@@ -49,7 +49,7 @@ namespace SpeedyRunner.Controllers
 
             _input = new InputReader(GetComponent<PlayerInput>());
            
-
+           
 
         }
 
@@ -84,6 +84,11 @@ namespace SpeedyRunner.Controllers
 
         }
 
+        public void StartRun()
+        {
+
+            Time.timeScale = 1;
+        }
         
 
 
@@ -97,6 +102,7 @@ namespace SpeedyRunner.Controllers
             {
 
                 GameManager.instance.StopGame();
+                panel.SetActive(true);
                 _isDead=false;
             }
         }

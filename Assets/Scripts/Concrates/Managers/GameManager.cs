@@ -8,7 +8,8 @@ namespace SpeedyRunner.Managers
 {
     public class GameManager : SingletonMonobehaviorObjects<GameManager>
     {
-        
+
+      
 
         private void Awake()
         {
@@ -20,6 +21,9 @@ namespace SpeedyRunner.Managers
         {
 
             Time.timeScale = 0;
+           
+
+
         }
 
 
