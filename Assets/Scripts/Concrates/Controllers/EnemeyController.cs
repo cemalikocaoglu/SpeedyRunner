@@ -1,3 +1,4 @@
+using SpeedyRunner.Managers;
 using SpeedyRunner.Movments;
 using System.Collections;
 using System.Collections.Generic;
@@ -44,7 +45,8 @@ namespace SpeedyRunner.Controllers
 
         void killedEnemy()
         {
-            Destroy(gameObject);
+            EnemyManager.instance.SetPool(this);
+           // Destroy(gameObject);
         }
 
 
