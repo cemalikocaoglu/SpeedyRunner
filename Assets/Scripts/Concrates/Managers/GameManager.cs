@@ -2,12 +2,14 @@ using SpeedyRunner.Abstract.Utilities;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SpeedyRunner.Uýs;
+using SpeedyRunner.Uis;
 
 namespace SpeedyRunner.Managers
 {
     public class GameManager : SingletonMonobehaviorObjects<GameManager>
     {
+        
+
         private void Awake()
         {
             SingletonThisObject(this);
@@ -21,14 +23,14 @@ namespace SpeedyRunner.Managers
         }
 
 
-        public static void ExitScene()
+        public  void ExitScene()
         {
 
             Debug.Log("Exit");
 
         }
 
-        public static void LoadScene()
+        public  void LoadScene()
         {
 
             Debug.Log("Load");

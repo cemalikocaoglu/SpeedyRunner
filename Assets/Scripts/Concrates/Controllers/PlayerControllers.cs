@@ -20,6 +20,8 @@ namespace SpeedyRunner.Controllers
 
         public float speed = 10f;
 
+        
+
         HorizontalMovers _horizontalMovers;
 
         public float jumpVelocityNew;
