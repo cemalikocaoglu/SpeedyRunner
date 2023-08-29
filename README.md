@@ -1,8 +1,4 @@
 # SpeedyRunner
 
 Speedy Ruunner :
-.
-.
-.
-.
-.
+
