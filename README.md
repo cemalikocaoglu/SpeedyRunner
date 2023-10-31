@@ -4,4 +4,3 @@
 
 lkğ
 tyyt
-y
