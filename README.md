@@ -1,4 +1,3 @@
 # SpeedyRunner
 
 v
-d
